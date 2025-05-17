@@ -92,7 +92,7 @@ const ProjectsSection: React.FC = () => {
               <div className="md:w-1/2 relative overflow-hidden">
                 <img
                   src={latestProject.image}
-                  alt={latestProject.title}
+                  alt={t(latestProject.title)}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
@@ -107,7 +107,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                   
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    {latestProject.title}
+                    {t(latestProject.title)}
                   </h3>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -122,7 +122,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                   
                   <p className="text-white/70 text-lg leading-relaxed mb-8">
-                    {latestProject.description}
+                  {t(latestProject.description)}
                   </p>
                 </div>
                 
