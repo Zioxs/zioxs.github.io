@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="mb-4 md:mb-0">
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="https://cdn.discordapp.com/attachments/861260756485406721/1371329233799872622/zi_logo_64_slim_nobg_white.png?ex=6822bd5f&is=68216bdf&hm=66f3a3a503e6a86fc0489388ca2fa27b05e97d96f80335ef23c609a44d598b85&" 
+              src="https://github.com/Zioxs/zioxs.github.io/blob/main/src/logo.png?raw=true" 
               alt="Logo" 
               className="h-12 w-auto"
             />

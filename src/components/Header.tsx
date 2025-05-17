@@ -87,7 +87,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-white text-2xl font-bold leading-none"
           >
             <img 
-              src="../logo.png"
+              src="https://github.com/Zioxs/zioxs.github.io/blob/main/src/logo.png?raw=true"
               alt="Logo" 
               className="h-12 w-auto"
             />
