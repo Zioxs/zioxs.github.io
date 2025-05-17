@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from '../contexts/TranslationContext';
 
 const Header: React.FC = () => {
@@ -8,6 +8,7 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { language, setLanguage, t } = useTranslation();
 
   useEffect(() => {
@@ -49,13 +50,13 @@ const Header: React.FC = () => {
     if (location.pathname === '/') {
       scrollToSection('hero');
     } else {
-      window.location.href = '/#hero';
+      navigate('/');
     }
   };
 
   const navigateToProjects = () => {
     if (location.pathname !== '/projects') {
-      window.location.href = '/projects';
+      navigate('/projects');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
