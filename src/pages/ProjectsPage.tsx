@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { useTranslation } from '../contexts/TranslationContext';
 
 interface Project {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   date: string;
   tags: string[];
@@ -32,32 +33,32 @@ const getTagColor = (tag: string): string => {
 const allProjects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A modern e-commerce platform with dynamic product listings, cart functionality, and secure checkout.',
+    titleKey: 'projects.cards.werewolf.title',
+    descriptionKey: 'projects.cards.werewolf.description',
     image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Dec 20th, 2023',
     tags: ['Fabric', 'GeckoLib']
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A minimal yet powerful task management application with drag-and-drop functionality and team collaboration.',
+    titleKey: 'projects.cards.ecommerce.title',
+    descriptionKey: 'projects.cards.ecommerce.description',
     image: 'https://images.pexels.com/photos/5939401/pexels-photo-5939401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Nov 23rd, 2023',
     tags: ['Forge', 'GeckoLib']
   },
   {
     id: 3,
-    title: 'Health & Fitness Tracker',
-    description: 'A comprehensive health tracking platform that monitors activity, nutrition, and provides personalized insights.',
+    titleKey: 'projects.cards.task.title',
+    descriptionKey: 'projects.cards.task.description',
     image: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Oct 16th, 2023',
     tags: ['NeoForge', 'Quilt']
   },
   {
     id: 4,
-    title: 'AI Content Generator',
-    description: 'An AI-powered content generation tool that creates high-quality articles, social media posts, and more.',
+    titleKey: 'projects.cards.health.title',
+    descriptionKey: 'projects.cards.health.description',
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Oct 8th, 2023',
     tags: ['Fabric', 'Forge', 'GeckoLib']
@@ -69,6 +70,7 @@ const ProjectsPage: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
   const projectsPerPage = 5;
   const totalPages = Math.ceil(allProjects.length / projectsPerPage);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setLoaded(true);
@@ -88,7 +90,7 @@ const ProjectsPage: React.FC = () => {
           <h1 className={`text-4xl md:text-5xl font-bold mb-6 transition-all duration-700 ${
             loaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}>
-            All <span className="text-purple-400">Projects</span>
+            {t('projects.allProjects.title')}<span className="text-purple-400">{t('projects.allProjects.title1')}</span>
           </h1>
           
           <div className="space-y-8">
@@ -106,7 +108,7 @@ const ProjectsPage: React.FC = () => {
                   <div className="md:w-2/5 relative overflow-hidden">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={t(project.titleKey)}
                       className="w-full h-full object-cover aspect-video md:aspect-auto transition-transform duration-700 hover:scale-105"
                     />
                   </div>
@@ -118,7 +120,7 @@ const ProjectsPage: React.FC = () => {
                     </div>
                     
                     <h2 className="text-2xl font-bold text-white mb-3">
-                      {project.title}
+                      {t(project.titleKey)}
                     </h2>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -133,7 +135,7 @@ const ProjectsPage: React.FC = () => {
                     </div>
                     
                     <p className="text-white/70 mb-6">
-                      {project.description}
+                      {t(project.descriptionKey)}
                     </p>
                   </div>
                 </div>

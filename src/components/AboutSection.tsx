@@ -1,27 +1,27 @@
 import React from 'react';
-import { Code, PenTool, Sparkles, Layers } from 'lucide-react';
+import { Code, Blocks, Sparkles, Layers } from 'lucide-react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 const skills = [
   {
     icon: <Code size={24} />,
-    title: 'Frontend Development',
-    description: 'Building responsive websites using modern frameworks like React, Vue, and Angular.'
+    titleKey: 'about.skills.modding.title',
+    descriptionKey: 'about.skills.modding.description'
   },
   {
-    icon: <PenTool size={24} />,
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and beautiful user interfaces with Figma and Adobe tools.'
+    icon: <Blocks size={24} />,
+    titleKey: 'about.skills.frameworks.title',
+    descriptionKey: 'about.skills.frameworks.description'
   },
   {
     icon: <Sparkles size={24} />,
-    title: 'Animation',
-    description: 'Implementing smooth, engaging animations and micro-interactions.'
+    titleKey: 'about.skills.animation.title',
+    descriptionKey: 'about.skills.animation.description'
   },
   {
     icon: <Layers size={24} />,
-    title: 'Full Stack',
-    description: 'Developing complete solutions with Node.js, Express, and modern databases.'
+    titleKey: 'about.skills.optimization.title',
+    descriptionKey: 'about.skills.optimization.description'
   }
 ];
 
@@ -75,8 +75,8 @@ const AboutSection: React.FC = () => {
                 <div className="text-purple-400 mb-4">
                   {skill.icon}
                 </div>
-                <h3 className="text-white text-lg font-semibold mb-2">{skill.title}</h3>
-                <p className="text-white/60 text-sm">{skill.description}</p>
+                <h3 className="text-white text-lg font-semibold mb-2">{t(skill.titleKey)}</h3>
+                <p className="text-white/60 text-sm">{t(skill.descriptionKey)}</p>
               </div>
             ))}
           </div>

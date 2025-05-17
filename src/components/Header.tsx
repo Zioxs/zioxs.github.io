@@ -53,9 +53,16 @@ const Header: React.FC = () => {
     }
   };
 
+  const navigateToProjects = () => {
+    if (location.pathname !== '/projects') {
+      window.location.href = '/projects';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navigationItems = [
     { label: t('nav.home'), action: () => handleLogoClick(new MouseEvent('click') as React.MouseEvent<Element, MouseEvent>) },
-    { label: t('nav.projects'), action: () => location.pathname === '/projects' ? null : window.location.href = '/projects' }
+    { label: t('nav.projects'), action: navigateToProjects }
   ];
 
   const languages = [
@@ -80,7 +87,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-white text-2xl font-bold leading-none"
           >
             <img 
-              src="https://cdn.discordapp.com/attachments/861260756485406721/1371329233799872622/zi_logo_64_slim_nobg_white.png?ex=6822bd5f&is=68216bdf&hm=66f3a3a503e6a86fc0489388ca2fa27b05e97d96f80335ef23c609a44d598b85&" 
+              src="../logo.png"
               alt="Logo" 
               className="h-12 w-auto"
             />
