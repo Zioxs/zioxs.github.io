@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 interface Project {
@@ -31,8 +31,8 @@ const getTagColor = (tag: string): string => {
 
 const latestProject: Project = {
   id: 1,
-  title: 'Werewolf Simulation',
-  description: 'The sun is shining, the flowers are blooming, and we\'re celebrating the season with a brand new Spring Event! Enjoy limited-time crates, seasonal collectibles, and a new creature joining the world!',
+  title: 'projects.cards.werewolf.title',
+  description: 'projects.cards.werewolf.description',
   image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   date: 'Apr 17th, 2025',
   tags: ['Fabric', 'GeckoLib']
