@@ -27,3 +27,5 @@ function App() {
     </TranslationProvider>
   );
 }
+
+export default App
