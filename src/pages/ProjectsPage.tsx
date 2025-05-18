@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 interface Project {
@@ -68,6 +69,7 @@ const allProjects: Project[] = [
 const ProjectsPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
+  const navigate = useNavigate();
   const projectsPerPage = 5;
   const totalPages = Math.ceil(allProjects.length / projectsPerPage);
   const { t } = useTranslation();
@@ -79,6 +81,10 @@ const ProjectsPage: React.FC = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleProjectClick = (projectId: number) => {
+    navigate(`/projects/${projectId}`);
   };
 
   return (
@@ -97,7 +103,8 @@ const ProjectsPage: React.FC = () => {
             {allProjects.map((project, index) => (
               <article
                 key={project.id}
-                className={`bg-gray-900/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-700 ${
+                onClick={() => handleProjectClick(project.id)}
+                className={`bg-gray-900/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-700 cursor-pointer ${
                   loaded 
                     ? 'translate-y-0 opacity-100' 
                     : 'translate-y-16 opacity-0'

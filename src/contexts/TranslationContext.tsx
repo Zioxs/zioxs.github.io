@@ -52,22 +52,27 @@ interface Translations {
         werewolf: {
           title: string;
           description: string;
+          content: string;
         };
         ecommerce: {
           title: string;
           description: string;
+          content: string;
         };
         task: {
           title: string;
           description: string;
+          content: string;
         };
         health: {
           title: string;
           description: string;
+          content: string;
         };
         ai: {
           title: string;
           description: string;
+          content: string;
         };
       };
     };
@@ -140,23 +145,28 @@ const translations: Translations = {
       cards: {
         werewolf: {
           title: 'Werewolf Simulation',
-          description: 'A comprehensive Minecraft mod that adds werewolf transformation mechanics, custom animations, and a unique progression system.'
+          description: 'A comprehensive Minecraft mod that adds werewolf transformation mechanics, custom animations, and a unique progression system.',
+          content: 'This mod introduces a complete werewolf transformation system with custom models, animations, and progression mechanics. Players can experience the thrill of transforming into a werewolf, complete with unique abilities and challenges. The mod features a day/night cycle awareness, custom sound effects, and particle systems that enhance the immersive experience.'
         },
         ecommerce: {
           title: 'Mythical Creatures',
-          description: 'An extensive mod adding various mythical creatures to Minecraft, complete with custom models, AI behaviors, and interactive features.'
+          description: 'An extensive mod adding various mythical creatures to Minecraft, complete with custom models, AI behaviors, and interactive features.',
+          content: 'Mythical Creatures brings a diverse range of legendary beings to life in Minecraft. Each creature features unique AI behaviors, custom animations, and interactive elements that make them feel truly alive in the game world. The mod includes a comprehensive bestiary system and special items related to each creature.'
         },
         task: {
           title: 'Magic Spells',
-          description: 'A magic-themed mod introducing new spell casting mechanics, particle effects, and an innovative magic progression system.'
+          description: 'A magic-themed mod introducing new spell casting mechanics, particle effects, and an innovative magic progression system.',
+          content: 'The Magic Spells mod revolutionizes magical gameplay in Minecraft with an intuitive spell casting system. Players can learn and master various spells, each with unique effects and particle systems. The mod includes a spell crafting system, magical reagents, and a progression system that rewards skillful play.'
         },
         health: {
           title: 'Enhanced Combat',
-          description: 'A combat enhancement mod featuring new weapons, combat mechanics, and special abilities for an improved fighting experience.'
+          description: 'A combat enhancement mod featuring new weapons, combat mechanics, and special abilities for an improved fighting experience.',
+          content: 'Enhanced Combat overhauls the vanilla combat system with new weapons, combat mechanics, and special abilities. The mod introduces combo systems, weapon-specific abilities, and enhanced hit detection. Players can master different fighting styles and unlock powerful combat techniques.'
         },
         ai: {
           title: 'Custom NPCs',
-          description: 'Advanced NPC system with custom AI behaviors, dialogue systems, and quest mechanics for enhanced gameplay interaction.'
+          description: 'Advanced NPC system with custom AI behaviors, dialogue systems, and quest mechanics for enhanced gameplay interaction.',
+          content: 'The Custom NPCs mod creates more engaging and interactive villagers with advanced AI behaviors. NPCs feature dynamic dialogue systems, relationship mechanics, and a quest system that adapts to player choices. Each NPC has unique personalities and daily routines that make the world feel more alive.'
         }
       }
     },
@@ -226,23 +236,28 @@ const translations: Translations = {
       cards: {
         werewolf: {
           title: 'Simulasi Manusia Serigala',
-          description: 'Mod Minecraft komprehensif yang menambahkan mekanika transformasi manusia serigala, animasi kustom, dan sistem progresi unik.'
+          description: 'Mod Minecraft komprehensif yang menambahkan mekanika transformasi manusia serigala, animasi kustom, dan sistem progresi unik.',
+          content: 'Mod ini memperkenalkan sistem transformasi manusia serigala lengkap dengan model kustom, animasi, dan mekanika progresi. Pemain dapat merasakan sensasi bertransformasi menjadi manusia serigala, lengkap dengan kemampuan dan tantangan unik. Mod ini memiliki kesadaran siklus siang/malam, efek suara kustom, dan sistem partikel yang meningkatkan pengalaman immersif.'
         },
         ecommerce: {
           title: 'Makhluk Mitologi',
-          description: 'Mod ekstensif yang menambahkan berbagai makhluk mitologi ke Minecraft, lengkap dengan model kustom, perilaku AI, dan fitur interaktif.'
+          description: 'Mod ekstensif yang menambahkan berbagai makhluk mitologi ke Minecraft, lengkap dengan model kustom, perilaku AI, dan fitur interaktif.',
+          content: 'Makhluk Mitologi menghidupkan berbagai makhluk legendaris di Minecraft. Setiap makhluk memiliki perilaku AI unik, animasi kustom, dan elemen interaktif yang membuat mereka terasa benar-benar hidup di dunia game. Mod ini mencakup sistem bestiarium komprehensif dan item khusus yang terkait dengan setiap makhluk.'
         },
         task: {
           title: 'Sihir dan Mantra',
-          description: 'Mod bertema sihir yang memperkenalkan mekanika casting mantra baru, efek partikel, dan sistem progresi sihir yang inovatif.'
+          description: 'Mod bertema sihir yang memperkenalkan mekanika casting mantra baru, efek partikel, dan sistem progresi sihir yang inovatif.',
+          content: 'Mod Sihir dan Mantra merevolusi gameplay magis di Minecraft dengan sistem casting mantra yang intuitif. Pemain dapat mempelajari dan menguasai berbagai mantra, masing-masing dengan efek dan sistem partikel unik. Mod ini mencakup sistem pembuatan mantra, reagen magis, dan sistem progresi yang menghargai permainan terampil.'
         },
         health: {
           title: 'Pertarungan yang Ditingkatkan',
-          description: 'Mod peningkatan pertarungan dengan senjata baru, mekanika pertarungan, dan kemampuan khusus untuk pengalaman bertarung yang lebih baik.'
+          description: 'Mod peningkatan pertarungan dengan senjata baru, mekanika pertarungan, dan kemampuan khusus untuk pengalaman bertarung yang lebih baik.',
+          content: 'Pertarungan yang Ditingkatkan mengubah sistem pertarungan vanilla dengan senjata baru, mekanika pertarungan, dan kemampuan khusus. Mod ini memperkenalkan sistem combo, kemampuan khusus senjata, dan deteksi hit yang ditingkatkan. Pemain dapat menguasai gaya bertarung yang berbeda dan membuka teknik pertarungan yang kuat.'
         },
         ai: {
           title: 'NPC Kustom',
-          description: 'Sistem NPC canggih dengan perilaku AI kustom, sistem dialog, dan mekanika quest untuk interaksi gameplay yang ditingkatkan.'
+          description: 'Sistem NPC canggih dengan perilaku AI kustom, sistem dialog, dan mekanika quest untuk interaksi gameplay yang ditingkatkan.',
+          content: 'Mod NPC Kustom menciptakan penduduk desa yang lebih menarik dan interaktif dengan perilaku AI canggih. NPC memiliki sistem dialog dinamis, mekanika hubungan, dan sistem quest yang beradaptasi dengan pilihan pemain. Setiap NPC memiliki kepribadian unik dan rutinitas harian yang membuat dunia terasa lebih hidup.'
         }
       }
     },
