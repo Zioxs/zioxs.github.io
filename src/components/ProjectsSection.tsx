@@ -5,11 +5,12 @@ import { useTranslation } from '../contexts/TranslationContext';
 
 interface Project {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   tags: string[];
   date: string;
+  slug: string;
 }
 
 const getTagColor = (tag: string): string => {
@@ -31,11 +32,12 @@ const getTagColor = (tag: string): string => {
 
 const latestProject: Project = {
   id: 1,
-  title: 'projects.cards.werewolf.title',
-  description: 'projects.cards.werewolf.description',
+  titleKey: 'projects.cards.werewolf.title',
+  descriptionKey: 'projects.cards.werewolf.description',
   image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   date: 'Apr 17th, 2025',
-  tags: ['Fabric', 'GeckoLib']
+  tags: ['Fabric', 'GeckoLib'],
+  slug: 'werewolf-simulation'
 };
 
 const ProjectsSection: React.FC = () => {
@@ -92,7 +94,7 @@ const ProjectsSection: React.FC = () => {
               <div className="md:w-1/2 relative overflow-hidden">
                 <img
                   src={latestProject.image}
-                  alt={t(latestProject.title)}
+                  alt={t(latestProject.titleKey)}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
@@ -107,7 +109,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                   
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    {t(latestProject.title)}
+                    {t(latestProject.titleKey)}
                   </h3>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -122,7 +124,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                   
                   <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  {t(latestProject.description)}
+                    {t(latestProject.descriptionKey)}
                   </p>
                 </div>
                 

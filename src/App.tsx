@@ -22,8 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/1" element={<WerewolfProject />} />
-          <Route path="/projects/2" element={<MythicalProject />} />
+          <Route path="/projects/werewolf-simulation" element={<WerewolfProject />} />
+          <Route path="/projects/mythical-creatures" element={<MythicalProject />} />
         </Routes>
       </Router>
     </TranslationProvider>

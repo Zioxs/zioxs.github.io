@@ -12,6 +12,7 @@ interface Project {
   image: string;
   date: string;
   tags: string[];
+  slug: string;
 }
 
 const getTagColor = (tag: string): string => {
@@ -38,7 +39,8 @@ const allProjects: Project[] = [
     descriptionKey: 'projects.cards.werewolf.description',
     image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Dec 20th, 2023',
-    tags: ['Fabric', 'GeckoLib']
+    tags: ['Fabric', 'GeckoLib'],
+    slug: 'werewolf-simulation'
   },
   {
     id: 2,
@@ -46,7 +48,8 @@ const allProjects: Project[] = [
     descriptionKey: 'projects.cards.ecommerce.description',
     image: 'https://images.pexels.com/photos/5939401/pexels-photo-5939401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Nov 23rd, 2023',
-    tags: ['Forge', 'GeckoLib']
+    tags: ['Forge', 'GeckoLib'],
+    slug: 'mythical-creatures'
   },
   {
     id: 3,
@@ -54,7 +57,8 @@ const allProjects: Project[] = [
     descriptionKey: 'projects.cards.task.description',
     image: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Oct 16th, 2023',
-    tags: ['NeoForge', 'Quilt']
+    tags: ['NeoForge', 'Quilt'],
+    slug: 'magic-spells'
   },
   {
     id: 4,
@@ -62,7 +66,8 @@ const allProjects: Project[] = [
     descriptionKey: 'projects.cards.health.description',
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     date: 'Oct 8th, 2023',
-    tags: ['Fabric', 'Forge', 'GeckoLib']
+    tags: ['Fabric', 'Forge', 'GeckoLib'],
+    slug: 'enhanced-combat'
   }
 ];
 
@@ -83,8 +88,8 @@ const ProjectsPage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleProjectClick = (projectId: number) => {
-    navigate(`/projects/${projectId}`);
+  const handleProjectClick = (slug: string) => {
+    navigate(`/projects/${slug}`);
   };
 
   return (
@@ -103,7 +108,7 @@ const ProjectsPage: React.FC = () => {
             {allProjects.map((project, index) => (
               <article
                 key={project.id}
-                onClick={() => handleProjectClick(project.id)}
+                onClick={() => handleProjectClick(project.slug)}
                 className={`bg-gray-900/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-700 cursor-pointer ${
                   loaded 
                     ? 'translate-y-0 opacity-100' 
