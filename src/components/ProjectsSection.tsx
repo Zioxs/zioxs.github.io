@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar } from 'lucide-react';
+import { Calendar, Boxes, Sparkles, Hammer, Puzzle, Box } from 'lucide-react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 interface Project {
@@ -12,6 +12,23 @@ interface Project {
   date: string;
   slug: string;
 }
+
+const getTagIcon = (tag: string) => {
+  switch (tag.toLowerCase()) {
+    case 'fabric':
+      return <Boxes size={14} />;
+    case 'geckolib':
+      return <Sparkles size={14} />;
+    case 'forge':
+      return <Hammer size={14} />;
+    case 'neoforge':
+      return <Box size={14} />;
+    case 'quilt':
+      return <Puzzle size={14} />;
+    default:
+      return null;
+  }
+};
 
 const getTagColor = (tag: string): string => {
   switch (tag.toLowerCase()) {
@@ -116,8 +133,9 @@ const ProjectsSection: React.FC = () => {
                     {latestProject.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className={`text-xs font-medium px-2 py-1 rounded-full ${getTagColor(tag)}`}
+                        className={`text-xs font-medium px-2 py-1 rounded-full flex items-center gap-1 ${getTagColor(tag)}`}
                       >
+                        {getTagIcon(tag)}
                         {tag}
                       </span>
                     ))}
