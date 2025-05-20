@@ -146,12 +146,12 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white/5 text-white/80 hover:bg-purple-400/20 hover:text-purple-400 transition-all duration-300"
-                  aria-label="LinkedIn"
+                  aria-label="Discord"
                 >
-                  <Linkedin size={22} />
+                  <Discord size={22} />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/Zioxs" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white/5 text-white/80 hover:bg-purple-400/20 hover:text-purple-400 transition-all duration-300"
