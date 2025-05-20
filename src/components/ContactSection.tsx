@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Github, Twitter, Discord } from 'lucide-react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 const ContactSection: React.FC = () => {
