@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Twitter, Discord } from 'lucide-react';
+import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { Discord } from "simple-icons"
+
 import { useTranslation } from '../contexts/TranslationContext';
 
 const ContactSection: React.FC = () => {
@@ -146,7 +148,7 @@ const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white/5 text-white/80 hover:bg-purple-400/20 hover:text-purple-400 transition-all duration-300"
-                  aria-label="Discord"
+                  aria-label="LinkedIn"
                 >
                   <Discord size={22} />
                 </a>
