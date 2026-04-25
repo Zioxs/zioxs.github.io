@@ -1,0 +1,73 @@
+.section { position: relative; z-index: 2; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: default;
+  height: 100%;
+}
+
+.animatedCard {
+  height: 100%;
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.cardDesc {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.check { color: var(--green); flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

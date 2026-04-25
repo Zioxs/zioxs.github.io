@@ -1,0 +1,187 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+  max-width: 700px !important;
+  padding-top: 8px;
+  padding-bottom: 80px;
+}
+
+.badge { display: flex; }
+
+.heading {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.wordWrap {
+  display: inline-block;
+  position: relative;
+  min-width: clamp(200px, 40vw, 350px);
+  height: 1.1em;
+  vertical-align: bottom;
+}
+
+.word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wordIn { opacity: 1; transform: translateY(0); }
+.wordOut { opacity: 0; transform: translateY(8px); }
+
+.sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.statValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.statLabel { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Minecraft CSS cube decoration */
+.visual {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(30deg) rotateY(-40deg);
+  animation: cubeFloat 5s ease-in-out infinite;
+}
+
+.face {
+  position: absolute;
+  border-radius: 8px;
+}
+
+.top {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--accent), #a78bfa);
+  transform: rotateX(90deg) translateZ(60px);
+  opacity: 0.9;
+}
+
+.left {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #4a3ea0, var(--accent));
+  transform: rotateY(0deg) translateZ(60px);
+}
+
+.right {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #2d2460, #4a3ea0);
+  transform: rotateY(90deg) translateZ(60px);
+}
+
+.cubeGlow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.orb1 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--green-glow);
+  animation: orbFloat 3.5s ease-in-out infinite;
+}
+
+.orb2 {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 14px var(--accent-glow);
+  animation: orbFloat 4.5s ease-in-out infinite reverse;
+}
+
+@keyframes cubeFloat {
+  0%, 100% { transform: rotateX(30deg) rotateY(-40deg) translateY(0); }
+  50% { transform: rotateX(33deg) rotateY(-38deg) translateY(-12px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 900px) {
+  .visual { display: none; }
+  .content { max-width: 100% !important; }
+}
+
+@media (max-width: 480px) {
+  .heading { font-size: 2.2rem; }
+  .actions { flex-direction: column; }
+  .actions .btn { width: 100%; justify-content: center; }
+  .stats { gap: 20px; }
+}
