@@ -3,12 +3,12 @@ import './globals.css'
 import { LanguageProvider } from '@/lib/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Zioxs — Custom Minecraft Mod Developer',
-  description: 'Professional Minecraft mod developer crafting custom mods for content creators. Forge, Fabric & Spigot expertise.',
-  keywords: 'minecraft mods, custom minecraft mods, minecraft mod developer, forge mods, fabric mods, content creator mods',
+  title: 'Zioxs — Minecraft Mod Developer',
+  description: 'Minecraft mod developer crafting mods and basic 3D models for creators and players.',
+  keywords: 'minecraft mods, minecraft mod developer, forge mods, fabric mods, blockbench modeling',
   openGraph: {
-    title: 'Zioxs — Custom Minecraft Mod Developer',
-    description: 'Custom Minecraft mods for content creators. Professional, polished, and tailored to your vision.',
+    title: 'Zioxs — Minecraft Mod Developer',
+    description: 'Minecraft mods and 3D modeling for content creators and players. Professional, polished, and tailored to your vision.',
     type: 'website',
   },
 }

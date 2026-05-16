@@ -15,7 +15,7 @@ export const dictionaries = {
       title: 'Mod Minecraft Kustom',
       builtFor: 'Dibuat untuk ',
       words: ['Pembuat Konten', 'Streamer', 'YouTuber'],
-      description: 'Saya Zioxs — pengembang mod Minecraft profesional yang berspesialisasi dalam mod kustom, alat pembuat konten, dan plugin server untuk meningkatkan konten Anda.',
+      description: 'Saya Zioxs — pengembang mod Minecraft yang berspesialisasi dalam membuat mod kustom dan model 3D dasar untuk kreator dan pemain.',
       viewProjects: 'Lihat Proyek',
       stats: {
         projects: 'Proyek',
@@ -39,14 +39,14 @@ export const dictionaries = {
       title: 'Tentang Saya',
       subtitle: 'Perjalanan, keterampilan, dan komitmen saya terhadap kualitas.',
       whoAmI: 'Siapa saya?',
-      whoAmIDesc: 'Saya seorang Modder Minecraft dengan pengalaman lebih dari bertahun-tahun dalam membuat pengalaman kustom untuk server dan pembuat konten. Saya berspesialisasi dalam membangun mod yang sangat optimal dari awal, dengan fokus pada kinerja dan skalabilitas.',
+      whoAmIDesc: 'Saya seorang Modder Minecraft dengan pengalaman praktis dalam membuat mod kustom. Saya fokus pada penulisan kode yang rapi dan memastikan mod berfungsi dengan baik.',
       whatIDo: 'Apa yang saya lakukan?',
-      whatIDoDesc: 'Baik ketika Anda membutuhkan item baru yang sederhana atau mekanisme permainan yang rumit, saya memiliki keterampilan teknis untuk mewujudkan visi Anda. Saya telah bekerja dengan klien di seluruh dunia untuk menghadirkan mod unik berkualitas tinggi.',
+      whatIDoDesc: 'Baik ketika Anda membutuhkan item fungsional baru, penyesuaian gameplay, atau model kustom dasar, saya dapat membuatnya. Saya bekerja sama dengan kreator untuk menghadirkan mod Minecraft yang sesuai dengan kebutuhan mereka.',
       skills: 'Keterampilan Lanjutan',
       whyMe: 'Mengapa Memilih Saya?',
       reasons: {
         quality: { title: 'Kualitas Kode', desc: 'Kode yang bersih dan optimal.' },
-        speed: { title: 'Pengiriman Cepat', desc: 'Selesai sesuai tenggat waktu.' },
+        speed: { title: 'Dapat Diandalkan', desc: 'Selesai sesuai jadwal.' },
         support: { title: 'Dukungan', desc: 'Perbaikan bug gratis.' },
       }
     },
@@ -69,7 +69,7 @@ export const dictionaries = {
       ctaPrefix: 'Cek juga mod saya di ',
     },
     footer: {
-      desc: 'Pengembang mod Minecraft profesional membuat mod kustom untuk kreator, server, dan pemain.',
+      desc: 'Pengembang mod Minecraft yang membuat mod kustom dan model dasar untuk kreator dan pemain.',
       quickLinks: 'Tautan Cepat',
       services: 'Layanan',
       projects: 'Proyek',
@@ -101,7 +101,7 @@ export const dictionaries = {
       title: 'Custom Minecraft Mods',
       builtFor: 'Built for ',
       words: ['Content Creators', 'Streamers', 'YouTubers'],
-      description: "I'm Zioxs — a professional Minecraft mod developer specialising in custom mods, content creator tools, and server plugins that take your content to the next level.",
+      description: "I'm Zioxs — a Minecraft mod developer specializing in building custom mods and basic 3D models for creators and players.",
       viewProjects: 'View Projects',
       stats: {
         projects: 'Projects',
@@ -125,14 +125,14 @@ export const dictionaries = {
       title: 'About Me',
       subtitle: 'My journey, skills, and commitment to quality.',
       whoAmI: 'Who am I?',
-      whoAmIDesc: "I'm a Minecraft Modder with over years of experience creating custom experiences for servers and content creators. I specialize in building highly optimized mods from scratch, with a strong focus on performance.",
+      whoAmIDesc: "I'm a Minecraft Modder with practical experience creating custom mods. I focus on writing clean code and ensuring the mods function well.",
       whatIDo: 'What I do',
-      whatIDoDesc: "Whether you need a simple new item or a complex gameplay mechanic, I have the technical skills to bring your vision to life. I have worked with clients worldwide to deliver high-quality, unique mods.",
+      whatIDoDesc: "Whether you need new functional items, gameplay tweaks, or basic custom models, I can build it. I work closely with creators to deliver reliable Minecraft mods that fit their specific needs.",
       skills: 'Advanced Skills',
       whyMe: 'Why Choose Me?',
       reasons: {
         quality: { title: 'Clean Code', desc: 'Optimal & maintainable' },
-        speed: { title: 'Fast Delivery', desc: 'On-time completion' },
+        speed: { title: 'Reliable Delivery', desc: 'On-time completion' },
         support: { title: 'Support', desc: 'Free bug fixes' },
       }
     },
@@ -155,7 +155,7 @@ export const dictionaries = {
       ctaPrefix: 'Also check out my mods on ',
     },
     footer: {
-      desc: 'Professional Minecraft mod developer crafting custom mods for creators, servers, and players.',
+      desc: 'Minecraft mod developer crafting custom mods and basic models for creators and players.',
       quickLinks: 'Quick Links',
       services: 'Services',
       projects: 'Projects',
